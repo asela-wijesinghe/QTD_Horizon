@@ -23,7 +23,7 @@ import { useEffect, useState } from 'react';
 import { MdAutoAwesome, MdBolt, MdEdit, MdPerson } from 'react-icons/md';
 import Bg from '../public/img/chat/bg-image.png';
 
-export default function Chat(props: { apiKeyApp: string }) {
+export default function Chat() {
   // Input States
   const [inputOnSubmit, setInputOnSubmit] = useState<string>('');
   const [inputCode, setInputCode] = useState<string>('');
@@ -35,7 +35,7 @@ export default function Chat(props: { apiKeyApp: string }) {
   const [loading, setLoading] = useState<boolean>(false);
 
   // API Key
-  // const [apiKey, setApiKey] = useState<string>(apiKeyApp);
+  // const [apiKey, setApiKey] = useState<string>(props.apiKeyApp);
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
   const inputColor = useColorModeValue('navy.700', 'white');
   const iconColor = useColorModeValue('brand.500', 'white');
@@ -141,12 +141,12 @@ export default function Chat(props: { apiKeyApp: string }) {
 
   // *** Initializing apiKey with .env.local value
   // useEffect(() => {
-  // ENV file verison
+  // // ENV file verison
   // const apiKeyENV = process.env.NEXT_PUBLIC_OPENAI_API_KEY
-  // if (apiKey === undefined || null) {
-  //   setApiKey(apiKeyENV)
-  // }
-  // }, [])
+  //   if (apiKeyENV === undefined || null) {
+  //     setApiKey(apiKeyENV);
+  //   }
+  // }, []);
 
   const handleChange = (Event: any) => {
     setInputCode(Event.target.value);
