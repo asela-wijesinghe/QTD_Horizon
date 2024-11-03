@@ -54,11 +54,11 @@ export default function SidebarDocs() {
           textAlign="center"
           mb="14px"
         >
-          Go unlimited with PRO
+          Become an Early User
         </Text>
         <Text fontSize="14px" color={'white'} mb="14px" textAlign="center">
-          Get your AI Project to another level and start doing more with Horizon
-          AI Template PRO!
+          Get exclusive access, shape the future and become an early user of
+          Feynman Quantum Copilot.
         </Text>
       </Flex>
       <Link href="https://horizon-ui.com/ai-template" isExternal>

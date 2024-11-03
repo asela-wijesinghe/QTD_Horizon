@@ -82,7 +82,7 @@ function SidebarContent(props: SidebarContent) {
         borderRadius="30px"
         p="14px"
       >
-        <NextAvatar h="34px" w="34px" src={avatar4} me="10px" />
+        {/* <NextAvatar h="34px" w="34px" src={avatar4} me="10px" />
         <Text color={textColor} fontSize="xs" fontWeight="600" me="10px">
           Adela Parkson
         </Text>
@@ -273,7 +273,7 @@ function SidebarContent(props: SidebarContent) {
           alignItems="center"
         >
           <Icon as={FiLogOut} width="16px" height="16px" color="inherit" />
-        </Button>
+        </Button> */}
       </Flex>
     </Flex>
   );

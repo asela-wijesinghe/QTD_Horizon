@@ -214,9 +214,9 @@ export default function Chat() {
                   color={iconColor}
                 />
               </Flex>
-              GPT-4o
+              Beta
             </Flex>
-            <Flex
+            {/* <Flex
               cursor={'pointer'}
               transition="0.3s"
               justify={'center'}
@@ -248,10 +248,10 @@ export default function Chat() {
                 />
               </Flex>
               GPT-3.5
-            </Flex>
+            </Flex> */}
           </Flex>
 
-          <Accordion color={gray} allowToggle w="100%" my="0px" mx="auto">
+          {/* <Accordion color={gray} allowToggle w="100%" my="0px" mx="auto">
             <AccordionItem border="none">
               <AccordionButton
                 borderBottom="0px solid"
@@ -278,7 +278,7 @@ export default function Chat() {
                 </Text>
               </AccordionPanel>
             </AccordionItem>
-          </Accordion>
+          </Accordion> */}
         </Flex>
         {/* Main Box */}
         <Flex
@@ -374,7 +374,7 @@ export default function Chat() {
             _focus={{ borderColor: 'none' }}
             color={inputColor}
             _placeholder={placeholderColor}
-            placeholder="Type your message here..."
+            placeholder="Write the Quantum requirement..."
             onChange={handleChange}
           />
           <Button
@@ -408,17 +408,17 @@ export default function Chat() {
           alignItems="center"
         >
           <Text fontSize="xs" textAlign="center" color={gray}>
-            Free Research Preview. ChatGPT may produce inaccurate information
-            about people, places, or facts.
+            Early Access Preview: Note that outputs may vary as we refine
+            accuracy and performance.
           </Text>
-          <Link href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">
+          <Link href="https://feynman.global/release-notes?src=copilot">
             <Text
               fontSize="xs"
               color={textColor}
               fontWeight="500"
               textDecoration="underline"
             >
-              ChatGPT May 12 Version
+              Feynman Copilot November Version
             </Text>
           </Link>
         </Flex>

@@ -7,8 +7,8 @@ import {
   ListItem,
   Text,
   useColorModeValue,
+  Link as ChakraLink,
 } from '@chakra-ui/react';
-import Link from '@/components/link/Link';
 
 export default function Footer() {
   const textColor = useColorModeValue('gray.500', 'white');
@@ -37,7 +37,7 @@ export default function Footer() {
         {' '}
         &copy; {new Date().getFullYear()}
         <Text as="span" fontWeight="500" ms="4px">
-          Horizon UI AI Template. All Rights Reserved.
+          Feynman Global. All Rights Reserved.
         </Text>
       </Text>
       <List display="flex">
@@ -47,14 +47,15 @@ export default function Footer() {
             md: '44px',
           }}
         >
-          <Link
+          <ChakraLink
             fontWeight="500"
             fontSize={{ base: 'xs', md: 'sm' }}
             color={textColor}
-            href="https://horizon-ui.com/pro"
+            href="https://feynman.global?src=copilot"
+            isExternal
           >
             Homepage
-          </Link>
+          </ChakraLink>
         </ListItem>
         <ListItem
           me={{
@@ -62,14 +63,15 @@ export default function Footer() {
             md: '44px',
           }}
         >
-          <Link
+          <ChakraLink
             fontWeight="500"
             fontSize={{ base: 'xs', md: 'sm' }}
             color={textColor}
-            href="https://horizon-ui.notion.site/End-User-License-Agreement-8fb09441ea8c4c08b60c37996195a6d5"
+            href="https://feynman.global/early-access?src=copilot"
+            isExternal
           >
-            License
-          </Link>
+            Get Early Access
+          </ChakraLink>
         </ListItem>
         <ListItem
           me={{
@@ -77,24 +79,26 @@ export default function Footer() {
             md: '44px',
           }}
         >
-          <Link
+          <ChakraLink
             fontWeight="500"
             fontSize={{ base: 'xs', md: 'sm' }}
             color={textColor}
-            href="https://horizon-ui.notion.site/Terms-Conditions-6e79229d25ed48f48a481962bc6de3ee"
+            href="https://feynman.global/terms-of-use?src=copilot"
+            isExternal
           >
             Terms of Use
-          </Link>
+          </ChakraLink>
         </ListItem>
         <ListItem>
-          <Link
+          <ChakraLink
             fontWeight="500"
             fontSize={{ base: 'xs', md: 'sm' }}
             color={textColor}
-            href="https://horizon-ui.notion.site/Privacy-Policy-8addde50aa8e408ca5c5f5811c38f971"
+            href="https://feynman.global/privacy-policy?src=copilot"
+            isExternal
           >
             Privacy Policy
-          </Link>
+          </ChakraLink>
         </ListItem>
       </List>
     </Flex>

@@ -96,7 +96,7 @@ export default function HeaderLinks(props: {
           maxW={{ base: '360px', md: 'unset' }}
         >
           {/* <Flex bgImage={navImage} borderRadius="16px" mb="28px" alt="" /> */}
-          <Flex flexDirection="column">
+          {/* <Flex flexDirection="column">
             <Link
               isExternal
               w="100%"
@@ -112,7 +112,7 @@ export default function HeaderLinks(props: {
                 w="100%"
                 h="54px"
               >
-                Buy Horizon AI Template
+                Buy Feynman Copilot Template
               </Button>
             </Link>
             <Link
@@ -156,7 +156,7 @@ export default function HeaderLinks(props: {
                 Try Free Version
               </Button>
             </Link>
-          </Flex>
+          </Flex> */}
         </MenuList>
       </Menu>
 
@@ -178,7 +178,7 @@ export default function HeaderLinks(props: {
           as={colorMode === 'light' ? IoMdMoon : IoMdSunny}
         />
       </Button>
-      <Menu>
+      {/* <Menu>
         <MenuButton p="0px" style={{ position: 'relative' }}>
           <Box
             _hover={{ cursor: 'pointer' }}
@@ -255,7 +255,7 @@ export default function HeaderLinks(props: {
             </MenuItem>
           </Flex>
         </MenuList>
-      </Menu>
+      </Menu> */}
     </Flex>
   );
 }
