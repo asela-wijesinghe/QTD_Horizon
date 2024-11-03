@@ -54,7 +54,7 @@ export default function SidebarDocs() {
           textAlign="center"
           mb="14px"
         >
-          Become an Early User
+          Become an Early User Today
         </Text>
         <Text fontSize="14px" color={'white'} mb="14px" textAlign="center">
           Get exclusive access, shape the future and become an early user of
