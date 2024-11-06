@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const OneCompilerEmbed = () => {
   useEffect(() => {
     // Function to handle messages from the iframe
-    const handleMessage = (event) => {
+    const handleMessage = (event: any) => {
       if (event.data && event.data.eventType === 'codeRunResult') {
         console.log('Execution Result:', event.data);
         // Handle the execution result as needed
