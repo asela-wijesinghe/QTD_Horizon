@@ -27,8 +27,8 @@ const CodeBlock: FC<Props> = ({
   }
 
   const sendCodeToEditorAndRun = (code: string) => {
-    const iframe = document.getElementById('onecompiler-embed');
-    if (iframe) {
+    const iframe = document.getElementById('onecompiler-embed') as HTMLIFrameElement;
+    if (iframe && iframe.contentWindow) {
       // Send the code to the editor
       iframe.contentWindow.postMessage(
         {
@@ -46,12 +46,14 @@ const CodeBlock: FC<Props> = ({
   
       // Trigger code execution
       setTimeout(() => {
-        iframe.contentWindow.postMessage(
-          {
-            eventType: 'triggerRun',
+        if (iframe.contentWindow) {
+          iframe.contentWindow.postMessage(
+            {
+              eventType: 'triggerRun',
           },
-          '*'
-        );
+            '*',
+          );
+        }
       }, 500); // Delay to ensure code is populated before execution
     }
   };
