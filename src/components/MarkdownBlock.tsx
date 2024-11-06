@@ -25,7 +25,7 @@ const MarkdownBlock: FC<Props> = ({
 
   return (
     <div className="relative">
-      <button
+      {/* <button
         className="absolute right-0 top-0 z-10 rounded bg-[#1A1B26] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
         onClick={() => {
           navigator.clipboard.writeText(code);
@@ -33,7 +33,7 @@ const MarkdownBlock: FC<Props> = ({
         }}
       >
         {copyText}
-      </button>
+      </button> */}
 
       <div className="p-4 h-500px bg-[#1A1B26] text-white overflow-scroll rounded-md"
       style={{

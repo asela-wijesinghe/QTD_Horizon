@@ -1,3 +1,4 @@
+import { Button } from '@chakra-ui/react';
 import { StreamLanguage } from '@codemirror/language';
 import { go } from '@codemirror/legacy-modes/mode/go';
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
@@ -19,6 +20,11 @@ const CodeBlock: FC<Props> = ({
 }) => {
   const [copyText, setCopyText] = useState<string>('Copy');
 
+  const runExecution = (code: string) => {
+    console.log(code)
+  }
+
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCopyText('Copy');
@@ -29,15 +35,27 @@ const CodeBlock: FC<Props> = ({
 
   return (
     <div className={`relative h-${height}px overflow-scroll bg-[#1A1B26] p-4 rounded-md`}>
-      <button
-        className="absolute right-0 top-0 z-10 rounded bg-[#1A1B26] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
+      <div className="flex justify-end gap-2 mb-5 mt-5">
+        <Button
+          size="sm"
+          className="rounded bg-[#1A1B26] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
         onClick={() => {
           navigator.clipboard.writeText(code);
           setCopyText('Copied!');
         }}
       >
-        {copyText}
-      </button> 
+       {copyText}
+      </Button> 
+      <Button
+        size="sm"
+        className="rounded bg-[#1A1B26] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
+        onClick={() => {
+          runExecution(code)
+        }}
+      >
+        Execute ▶️
+      </Button> 
+      </div>
       <CodeMirror
         editable={editable}
         value={code}
