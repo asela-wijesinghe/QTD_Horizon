@@ -61,7 +61,7 @@ export default function SidebarDocs() {
           Feynman Quantum Copilot.
         </Text>
       </Flex>
-      <Link href="https://horizon-ui.com/ai-template" isExternal>
+      <Link href="https://forms.office.com/Pages/ResponsePage.aspx?id=MndA_kAZC0iL_NNTj_1X2AwtaLSPTwZNjZUxZwTzoatURU5WVVhCMzJUVUZNNEtaWFpOVUc3UVdNRS4u" isExternal>
         <Button
           bg="whiteAlpha.300"
           _hover={{ bg: 'whiteAlpha.200' }}
@@ -74,7 +74,7 @@ export default function SidebarDocs() {
           mx="auto"
           borderRadius="45px"
         >
-          Get started with PRO
+          Get Early Access
         </Button>
       </Link>
     </Flex>
