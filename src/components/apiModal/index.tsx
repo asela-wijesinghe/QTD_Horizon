@@ -91,7 +91,7 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
               textAlign={'center'}
               color={textColor}
             >
-              Enter your OpenAI API Key
+              Enter your Feynman API Key
             </ModalHeader>
             <ModalCloseButton _focus={{ boxShadow: 'none' }} />
             <ModalBody p="0px">
@@ -102,7 +102,7 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
                 lineHeight="28px"
                 mb="22px"
               >
-                You need an OpenAI API Key to use Feynman Copilot Template's
+                You need an Feynman API Key to use Feynman Copilot Template's
                 features. Your API Key is stored locally on your browser and
                 never sent anywhere else.
               </Text>
@@ -162,11 +162,12 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
               <Link
                 color={link}
                 fontSize="sm"
-                href="https://platform.openai.com/account/api-keys"
+                target="_blank"
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=MndA_kAZC0iL_NNTj_1X2AwtaLSPTwZNjZUxZwTzoatURU5WVVhCMzJUVUZNNEtaWFpOVUc3UVdNRS4u"
                 textDecoration="underline !important"
                 fontWeight="600"
               >
-                Get your API key from Open AI Dashboard
+                Get your API key from Feynman Dashboard
               </Link>
               <Accordion allowToggle w="100%" my="16px">
                 <AccordionItem border="none">
@@ -200,14 +201,15 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
                         <Link
                           textDecoration="underline"
                           fontSize=",d"
-                          href="https://platform.openai.com/account/"
+                          target="_blank"
+                          href="https://forms.office.com/Pages/ResponsePage.aspx?id=MndA_kAZC0iL_NNTj_1X2AwtaLSPTwZNjZUxZwTzoatURU5WVVhCMzJUVUZNNEtaWFpOVUc3UVdNRS4u"
                           fontWeight="500"
                           color={grayColor}
                         >
-                          OpenAI account
+                          Feynman account
                         </Link>{' '}
-                        and a valid API key to use ChatGPT. We don't sell API
-                        keys.
+                        and a valid API key to use Feynman Copilot Template. We
+                        don't sell API keys.
                       </ListItem>
                       <ListItem
                         color={grayColor}
@@ -220,11 +222,12 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
                           textDecoration="underline"
                           fontSize="md"
                           lineHeight="28px"
-                          href="https://platform.openai.com/account/billing/overview"
+                          target="_blank"
+                          href="https://forms.office.com/Pages/ResponsePage.aspx?id=MndA_kAZC0iL_NNTj_1X2AwtaLSPTwZNjZUxZwTzoatURU5WVVhCMzJUVUZNNEtaWFpOVUc3UVdNRS4u"
                           fontWeight="500"
                           color={grayColor}
                         >
-                          OpenAI Billing
+                          Feynman Billing
                         </Link>{' '}
                         page. Without billing info, your API key will not work.
                       </ListItem>
@@ -239,7 +242,7 @@ function APIModal(props: { setApiKey: any; sidebar?: boolean }) {
                 mb="42px"
                 mx="30px"
               >
-                *The app will connect to OpenAI API server to check if your API
+                *The app will connect to Feynman API server to check if your API
                 Key is working properly.
               </Text>
             </ModalBody>
