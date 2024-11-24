@@ -1,9 +1,9 @@
 'use client';
-import { createIcon } from '@chakra-ui/icons';
+import { createIcon, useColorModeValue } from '@chakra-ui/icons'; //using chakra ui icons
 
 export const HorizonLogo = createIcon({
-  displayName: 'horizonLogo',
-  viewBox: '0 0 146 20',
+  displayName: 'horizonLogo', //name of the icon
+  viewBox: '0 0 146 20', //size of the icon
   path: (
     <g fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -30,7 +30,7 @@ export const RoundedChart = createIcon({
 export const Logo = createIcon({
   displayName: 'Logo',
   viewBox: '0 0 217 39',
-  path: (
+  path:(
     <svg width="217" height="39" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect
         width="38.969"

@@ -67,8 +67,12 @@ const CodeBlock: FC<Props> = ({
   }, [copyText]);
 
   return (
-    <div className={`relative h-${height}px overflow-scroll bg-[#1A1B26] p-4 rounded-md`} style={{ marginTop: '10px', marginBottom: '20px' }}>
-    
+    <div className={`relative h-${height}px overflow-scroll bg-[#1A1B26] p-4 rounded-md`} style={{ 
+        marginTop: '10px', 
+        marginBottom: '20px',
+        opacity: 1,
+        transition: 'opacity 0.3s ease-in'
+      }}>
       <CodeMirror
         editable={editable}
         value={code}

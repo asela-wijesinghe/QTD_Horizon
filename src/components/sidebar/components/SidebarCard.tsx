@@ -6,7 +6,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import logoWhite from '../../../../public/img/layout/logoWhite.png';
+import bgImage from '../../../../public/img/chat/bg-image.png';
 
 export default function SidebarDocs() {
   const bgColor = 'linear-gradient(135deg, #868CFF 0%, #4318FF 100%)';
@@ -36,7 +36,7 @@ export default function SidebarDocs() {
         top="-47px"
         transform="translate(-50%, 0%)"
       >
-        <Img src={logoWhite.src} w="40px" h="40px" />
+        <Img src={bgImage.src} w="40px" h="40px" />
       </Flex>
       <Flex
         direction="column"

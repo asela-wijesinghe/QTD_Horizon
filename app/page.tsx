@@ -88,6 +88,7 @@ export default function Chat() {
     };
 
     // -------------- Fetch --------------
+    try{
     const response = await fetch('./api/chatAPI', {
       method: 'POST',
       headers: {
@@ -126,8 +127,13 @@ export default function Chat() {
       const chunkValue = decoder.decode(value);
       setOutputCode((prevCode) => prevCode + chunkValue);
     }
+  }catch(error){
+    console.error('Error:', error)
+    alert('An error occurred while processing your request.');
+  }finally{
 
     setLoading(false);
+    }
   };
   // -------------- Copy Response --------------
   // const copyToClipboard = (text: string) => {
@@ -150,6 +156,12 @@ export default function Chat() {
 
   const handleChange = (Event: any) => {
     setInputCode(Event.target.value);
+  };
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' && !loading) {
+      handleTranslate();
+    }
   };
 
   return (
@@ -287,6 +299,9 @@ export default function Chat() {
           mx="auto"
           display={outputCode ? 'flex' : 'none'}
           mb={'auto'}
+          style={{
+            opacity: loading ? 0.7 : 1,
+          }}
         >
           <Flex w="100%" align={'center'} mb="10px">
             <Flex
@@ -352,7 +367,7 @@ export default function Chat() {
                 color="white"
               />
             </Flex>
-            <MessageBoxChat output={outputCode} />
+            <MessageBoxChat output={outputCode} loading={loading} />
           </Flex>
         </Flex>
         {/* Chat Input */}
@@ -376,6 +391,7 @@ export default function Chat() {
             _placeholder={placeholderColor}
             placeholder="Write the Quantum requirement..."
             onChange={handleChange}
+            onKeyDown={handleKeyPress} //Press enter to add the message
           />
           <Button
             variant="primary"
